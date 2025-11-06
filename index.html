@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>We The Parents Foundation</title>
+<meta name="theme-color" content="#2b1b45">
+<meta name="description" content="Equal rights. Shared light. Court watching, education, and community support.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='12' width='64' height='64' fill='%232b1b45'/%3E%3Ccircle cx='32' cy='22' r='8' fill='%23d7a12a'/%3E%3Crect x='14' y='30' width='36' height='6' rx='3' fill='%23fff'/%3E%3Crect x='14' y='40' width='36' height='6' rx='3' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+/* ===== Brand palette (matches your poster colors) ===== */
+:root{
+  --ink:#1a1324;            /* deep ink for body text */
+  --ink-soft:#453a55;
+  --paper:#fffaf5;          /* warm paper */
+  --plum:#2b1b45;           /* deep header/nav base */
+  --violet:#4e2a7f;         /* gradient mid */
+  --magenta:#7e3a7d;        /* gradient mid-2 */
+  --sun:#f6b04d;            /* warm sunset */
+  --gold:#d7a12a;           /* accent buttons */
+  --gold-dark:#a67c14;
+  --card:#ffffff;
+  --radius:18px;
+  --shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+html,body{
+  margin:0; padding:0; background:var(--paper); color:var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+}
+a{ color:#2f3ea8; text-decoration:none }
+a:hover{ text-decoration:underline }
+
+/* ===== Header / Nav ===== */
+.site-header{ background:var(--plum); color:#fff; }
+.nav{
+  max-width:1100px; margin:0 auto; padding:14px 18px;
+  display:flex; align-items:center; gap:18px;
+}
+.brand{ display:flex; align-items:center; gap:12px; color:#fff; text-decoration:none; }
+.brand-text{ font-weight:800; letter-spacing:.4px; color:#fff; }
+.brand-logo{
+  width:44px; height:44px; border-radius:12px; object-fit:cover;
+  background:#fff1; box-shadow:0 4px 14px rgba(0,0,0,.25);
+}
+.nav-links{ list-style:none; margin-left:auto; padding:0; display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+.nav-links a{ color:#fff; font-weight:600; }
+.nav-links a:hover{ opacity:.9; }
+.nav-social .fb{
+  border:1px solid rgba(255,255,255,.25); padding:6px 10px; border-radius:10px; display:inline-flex; align-items:center; gap:6px;
+}
+
+/* ===== Hero (Top) ===== */
+.hero{
+  position:relative; overflow:hidden;
+  background: linear-gradient(180deg, var(--plum) 0%, var(--violet) 40%, var(--magenta) 70%, #fbe7ba 100%);
+}
+.hero-inner{
+  position:relative; z-index:1; max-width:1000px; margin:0 auto;
+  padding: clamp(28px, 6vw, 64px) 18px 36px; text-align:center; color:#fff;
+}
+.hero-mark{
+  width:min(140px, 42vw); height:auto; border-radius:20px; display:inline-block;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+  background:#fff3; /* subtle in case image not present yet */
+}
+.hero h1{
+  font-size: clamp(1.9rem, 5vw, 3rem); margin:16px 0 6px;
+}
+.tagline{ font-weight:700; letter-spacing:.6px; opacity:.95 }
+.lede{
+  max-width:760px; margin:10px auto 16px; color:#fff; opacity:.95;
+  font-size: clamp(1rem, 2.2vw, 1.15rem); line-height:1.6;
+}
+.hero-ctas{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:8px; }
+.btn{
+  display:inline-block; font-weight:800; padding:12px 18px; border-radius:14px; border:2px solid transparent; text-decoration:none;
+}
+.btn-gold{ background:var(--gold); color:#261a00; }
+.btn-gold:hover{ background:var(--gold-dark); }
+.btn-ghost{ background:transparent; color:#fff; border-color:rgba(255,255,255,.6); }
+.btn-ghost:hover{ background:rgba(255,255,255,.12); }
+
+/* ===== Content Cards ===== */
+.container{ max-width:1100px; margin:0 auto; padding:22px 18px 40px; }
+.grid3{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.card{
+  background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow);
+  padding:20px;
+}
+.card h3{ margin:0 0 6px; }
+
+/* ===== Mid-page Banner using tall poster ===== */
+.banner{
+  margin: 28px auto; max-width:1100px; border-radius:22px; overflow:hidden;
+  position:relative; box-shadow:var(--shadow);
+}
+.banner::before{
+  content:""; position:absolute; inset:0;
+  background:
+    linear-gradient(180deg, rgba(43,27,69,.65) 0%, rgba(78,42,127,.55) 40%, rgba(126,58,125,.3) 70%, rgba(255,255,255,.0) 100%),
+    url('/tall-logo.jpg') center/cover no-repeat;
+  /* If you haven't uploaded /tall-logo.jpg yet, fallback gradient: */
+  /* background: linear-gradient(135deg, var(--violet), var(--magenta), var(--sun)); */
+}
+.banner-inner{
+  position:relative; z-index:1; color:#fff; text-align:center;
+  padding: clamp(28px, 7vw, 72px) 18px;
+}
+.banner h2{ margin:0 0 8px; font-size: clamp(1.4rem, 3.5vw, 2.2rem); }
+.banner p{ margin:0 auto; max-width:720px; line-height:1.6; }
+
+/* ===== Footer ===== */
+footer{
+  border-top:1px solid #eadfd0; margin-top:34px; padding:20px 18px 48px;
+  color:var(--ink-soft);
+}
+.footer-inner{ max-width:1100px; margin:0 auto; display:flex; gap:14px; align-items:center; justify-content:space-between; flex-wrap:wrap; }
+.footer-links{ display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+.footer-links a{ color:var(--ink-soft); }
+.footer-links a:hover{ color:var(--ink); }
+
+/* ===== Responsive ===== */
+@media (max-width:860px){
+  .grid3{ grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Header / Nav ===== -->
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="/">
+      <!-- Circle logo at top; upload as /circle-logo.png -->
+      <img src="/circle-logo.png" alt="We The Parents Foundation" class="brand-logo" onerror="this.style.opacity=0">
+      <span class="brand-text">WE THE PARENTS</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/courtwatch.html">Court Watch</a></li>
+      <li><a href="/resources.html">Resources</a></li>
+      <li><a href="/donate.html">Donate</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li class="nav-social">
+        <a class="fb" href="https://www.facebook.com/share/1ENy2c62eN/" target="_blank" rel="noopener" aria-label="Facebook">
+          <!-- Inline Facebook icon (no extra files needed) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 320 512" fill="white" aria-hidden="true">
+            <path d="M279.14 288l14.22-92.66h-88.91V127.91c0-25.35 12.42-50.06 52.24-50.06H295V6.26S259.48 0 225.36 0C141.09 0 89.09 54.42 89.09 153.12V195.3H0v92.7h89.09V512h107.7V288z"/>
+          </svg>
+          <span style="margin-left:6px;">Facebook</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="hero-inner">
+    <!-- Circle logo centered big; upload as /circle-logo.png -->
+    <img class="hero-mark" src="/circle-logo.png" alt="We The Parents – circle emblem" onerror="this.style.display='none'">
+    <div class="tagline">Equal Rights. Shared Light.</div>
+    <h1>Turning pain into purpose.</h1>
+    <p class="lede">
+      We The Parents Foundation brings sunlight to family courts through respectful court watching,
+      education, and community support—so every family can access fairness and due process.
+    </p>
+    <div class="hero-ctas">
+      <a class="btn btn-gold" href="/courtwatch.html#request">Get Court Watch Support</a>
+      <a class="btn btn-ghost" href="/about.html">About the Foundation</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== What we do (cards) ===== -->
+<main class="container">
+  <section class="grid3" aria-label="What we do">
+    <article class="card">
+      <h3>Court Watching</h3>
+      <p>Trained volunteers attend hearings (in-person or virtual), observe quietly, and submit standardized reports to document patterns.</p>
+    </article>
+    <article class="card">
+      <h3>Education</h3>
+      <p>Plain-language guides on due process, equal protection, speech, and search/seizure boundaries in family court.</p>
+    </article>
+    <article class="card">
+      <h3>Community</h3>
+      <p>Peer support, templates, and resource referrals so parents aren’t navigating the process alone.</p>
+    </article>
+  </section>
+</main>
+
+<!-- ===== Mid-page banner using your tall poster as background ===== -->
+<section class="banner" aria-label="Mission banner">
+  <!-- Upload your tall poster as /tall-logo.jpg; gradient overlay already applied -->
+  <div class="banner-inner">
+    <h2>Sunlight and documentation drive change.</h2>
+    <p>We observe, we don’t disrupt. Privacy and safety come first. Your lived experience can help improve outcomes for every family.</p>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="footer-inner">
+    <div>© <span id="y"></span> We The Parents Foundation</div>
+    <div class="footer-links">
+      <a href="mailto:wetheparentsfoundation@gmail.com">wetheparentsfoundation@gmail.com</a>
+      <span>•</span>
+      <a href="https://www.facebook.com/share/1ENy2c62eN/" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+
+</body>
+</html>
