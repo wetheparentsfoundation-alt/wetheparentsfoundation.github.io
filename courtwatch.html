@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Court Watch • We The Parents Foundation</title><link rel="icon" href="assets/favicon.svg"><link rel="stylesheet" href="style.css">
+<title>Court Watch • We The Parents Foundation</title><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css">
 <body>
 <nav class="nav container">
   <div class="brand">
-    <img src="assets/logo.svg" alt="WTPF logo" width="26" height="26"/>
+    <img src="logo.svg" alt="WTPF logo" width="26" height="26"/>
     <a href="index.html">We The Parents Foundation</a>
   </div>
   <ul>
@@ -17,7 +17,7 @@
 </nav>
 
 <main class="container">
-  <section class="section card">
+  <section class="section card" id="become">
     <h1>Become a Court Watcher</h1>
     <p class="lead">Court Watchers attend public hearings, take structured notes, and submit a standardized report. We never interfere with proceedings.</p>
     <h3>How it works</h3>
@@ -26,16 +26,40 @@
       <li>Observe assigned hearings (virtual or in‑person).</li>
       <li>Submit your report via our checklist.</li>
     </ol>
-    <div class="alert">Replace the link below with your live signup form (Google Form/Airtable) when ready.</div>
     <div class="btns">
-      <a class="btn primary" href="https://forms.gle/" target="_blank" rel="noopener">Volunteer Form (placeholder)</a>
-      <a class="btn" href="resources.html">Download Checklist</a>
+      <a class="btn primary" href="https://forms.gle/" target="_blank" rel="noopener">Apply to be a Watcher (placeholder)</a>
+      <a class="btn" href="#request">Request Court Watch for a Hearing</a>
+    </div>
+  </section>
+
+  <section class="section card" id="request">
+    <h2>Have your hearing Court Watched</h2>
+    <p>We try to honor as many requests as possible. Provide your case details and hearing date/time below. We’ll confirm availability by email.</p>
+    <div class="alert">Replace this with a form service later. For now it opens your email.</div>
+    <form class="form" action="mailto:wetheparentsfoundation@gmail.com" method="post" enctype="text/plain">
+      <input name="Name" placeholder="Your name" required>
+      <input name="Email" type="email" placeholder="Your email" required>
+      <input name="Case" placeholder="Case number / county">
+      <input name="Date" placeholder="Hearing date & time (with timezone)">
+      <textarea name="Notes" placeholder="Anything we should know (virtual link, ADA needs, safety, etc.)"></textarea>
+      <button class="btn primary" type="submit">Request Court Watch</button>
+    </form>
+  </section>
+
+  <section class="section card" id="volunteer">
+    <h2>Volunteer with Us</h2>
+    <p>Not ready to watch hearings? Help with admin, research, or community outreach.</p>
+    <div class="btns">
+      <a class="btn primary" href="https://forms.gle/" target="_blank" rel="noopener">Volunteer Sign‑Up (placeholder)</a>
+      <a class="btn" href="resources.html">Download Checklist (soon)</a>
     </div>
   </section>
 </main>
 <footer class="container">
   <div class="badge">We The Parents Foundation • Florida</div>
-  <div style="margin-top:6px">© <span id="y"></span> We The Parents Foundation</div>
+  <div style="margin-top:6px">© <span id="y"></span> We The Parents Foundation •
+    <a href="https://facebook.com/WeTheParentsFoundation" target="_blank" rel="noopener">Facebook</a>
+  </div>
   <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </footer>
 </body></html>
