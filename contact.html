@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact • We The Parents Foundation</title><link rel="icon" href="assets/favicon.svg"><link rel="stylesheet" href="style.css">
+<body>
+<nav class="nav container">
+  <div class="brand">
+    <img src="assets/logo.svg" alt="WTPF logo" width="26" height="26"/>
+    <a href="index.html">We The Parents Foundation</a>
+  </div>
+  <ul>
+    <li><a href="about.html" class="">About</a></li>
+    <li><a href="courtwatch.html" class="">Court Watch</a></li>
+    <li><a href="resources.html" class="">Resources</a></li>
+    <li><a href="donate.html" class="">Donate</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="container">
+  <section class="section card">
+    <h1>Contact Us</h1>
+    <p class="lead">For media, partnerships, or general questions, use the form or email us directly.</p>
+    <div class="form">
+      <div class="alert">This simple form opens your email client (mailto:). Swap for a Google Form or a form service later for reliability.</div>
+      <form action="mailto:wetheparentsfoundation@gmail.com" method="post" enctype="text/plain">
+        <input name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message"></textarea>
+        <button class="btn primary" type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="container">
+  <div class="badge">We The Parents Foundation • Florida</div>
+  <div style="margin-top:6px">© <span id="y"></span> We The Parents Foundation</div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</footer>
+</body></html>

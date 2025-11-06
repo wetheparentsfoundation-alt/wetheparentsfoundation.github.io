@@ -1,7 +1,68 @@
 <!doctype html>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>We The Parents Foundation</title>
-<h1>We The Parents Foundation</h1>
-<p>Site is live on GitHub Pages 🎉</p>
-<p><a href="about.html">About</a> • <a href="volunteer.html">Court Watch</a> • <a href="contact.html">Contact</a></p>
+<link rel="icon" href="assets/favicon.svg">
+<link rel="stylesheet" href="style.css">
+<body>
+
+<nav class="nav container">
+  <div class="brand">
+    <img src="assets/logo.svg" alt="WTPF logo" width="26" height="26"/>
+    <a href="index.html">We The Parents Foundation</a>
+  </div>
+  <ul>
+    <li><a href="about.html" class="">About</a></li>
+    <li><a href="courtwatch.html" class="">Court Watch</a></li>
+    <li><a href="resources.html" class="">Resources</a></li>
+    <li><a href="donate.html" class="">Donate</a></li>
+    <li><a href="contact.html" class="">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero container">
+  <div class="card">
+    <div class="kicker">Parents • Accountability • Reform</div>
+    <h1>Turning pain into purpose.</h1>
+    <p class="lead">We The Parents Foundation brings sunlight to family courts through respectful court watching, education, and community support—so every family can access fairness and due process.</p>
+    <div class="btns">
+      <a class="btn primary" href="courtwatch.html">Become a Court Watcher</a>
+      <a class="btn ghost" href="about.html">About the Foundation</a>
+    </div>
+  </div>
+  <div class="hero-art"></div>
+</header>
+<main class="container">
+  <section class="section">
+    <div class="kicker">What we do</div>
+    <div class="grid3">
+      <div class="card"><h3>Court Watching</h3><p>Trained volunteers attend hearings (in‑person or virtual), observe quietly, and submit standardized reports to document systemic patterns.</p></div>
+      <div class="card"><h3>Education</h3><p>Plain‑language guides on due process, equal protection, speech, and search/seizure boundaries as applied to family court.</p></div>
+      <div class="card"><h3>Community</h3><p>Peer support, templates, and resource referrals so parents aren’t navigating the process alone.</p></div>
+    </div>
+  </section>
+  <section class="section grid2">
+    <div class="card">
+      <h3>Watcher Checklist (preview)</h3>
+      <ul class="check">
+        <li>Public access & ADA accommodations</li>
+        <li>Opportunities to be heard & present evidence</li>
+        <li>Timeliness, transparency, and courtroom conduct</li>
+      </ul>
+      <div class="btns"><a class="btn primary" href="courtwatch.html">Join Court Watch</a></div>
+    </div>
+    <div class="card">
+      <h3>Share your story</h3>
+      <p>Your lived experience matters. Contribute anonymized information to help identify patterns.</p>
+      <a class="btn" href="contact.html">Contact Us</a>
+    </div>
+  </section>
+</main>
+
+<footer class="container">
+  <div class="badge">We The Parents Foundation • Florida</div>
+  <div style="margin-top:6px">© <span id="y"></span> We The Parents Foundation</div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</footer>
+
+</body></html>
