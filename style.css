@@ -41,3 +41,45 @@ textarea{min-height:120px}
 ul.check{padding-left:18px} ul.check li{margin:8px 0}
 .cta-slab{background:#fff7e1;border:1px solid #f0e2bf;border-radius:16px;padding:18px}
 @media (max-width:900px){.hero{grid-template-columns:1fr} .grid3,.grid2{grid-template-columns:1fr}}
+/* Mission banner background and layout */
+.banner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  margin: 2rem 0;
+  height: 400px; /* adjust as needed */
+}
+
+/* Background image styling */
+.banner-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; /* centers your tall logo */
+  z-index: 0;
+  opacity: 0.3; /* adjust transparency */
+}
+
+/* Text inside the banner */
+.banner-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding: 3rem 1rem;
+}
+
+.banner-inner h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.banner-inner p {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
